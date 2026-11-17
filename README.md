@@ -15,6 +15,28 @@ Then the Mac reboots, or crashes, or an update restarts it. All of that is gone,
 minutes rebuilding it by hand: open the windows, split the panes, `cd` into every folder, retype the tab
 names, restart the assistant. If you work on more than one project, you do it every time you switch.
 
+## Why this is worth solving
+
+Ten minutes sounds small. It isn't, for four reasons:
+
+- **It's not only the typing, it's the thinking.** Your layout is a map of your work: this tab is the
+  build, that pane is the deploy, this window is the other project. Rebuilding it means rebuilding that
+  map in your head, and that is the expensive part. Getting back to work is slow, not just getting back
+  to a screen.
+- **The valuable state is the conversation.** If you use an AI coding assistant, each project has a
+  session that already knows the codebase and what you were in the middle of. Lose the window and you
+  lose track of which session was where. Restarting the assistant in the right folder, resuming its last
+  conversation, is what gets you back to the exact point you left.
+- **Crashes aren't scheduled.** A freeze or a forced update always lands at the worst time. When recovery
+  is one command, a restart stops being something you dread and put off, and that includes the
+  security updates people postpone because "I'll lose my setup".
+- **Switching projects is a rebuild too.** Many people work on several projects in a day. A saved
+  workspace per project turns "get set up to work on X" into one command, like loading a saved game.
+
+We built `a51-ws` after our own Mac froze in the middle of a workday and took 8 tabs of carefully split
+panes with it. Rebuilding it by hand after every reboot got old fast. It's small, it's simple, and it should
+save anyone who lives in the terminal real time, so we're giving it away.
+
 ## The solution
 
 `a51-ws` remembers the arrangement under a name and rebuilds it on demand.

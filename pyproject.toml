@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "a51-ws"
+dynamic = ["version"]
+description = "Save and restore named iTerm2 workspaces: windows, tabs, split panes, folders, and Claude."
+readme = "README.md"
+license = "GPL-2.0-or-later"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+authors = [{ name = "Area 51 Software" }]
+keywords = ["iterm2", "terminal", "workspace", "claude", "macos"]
+classifiers = [
+  "Operating System :: MacOS",
+  "Environment :: Console",
+  "Topic :: System :: Shells",
+]
+dependencies = ["iterm2>=2.7"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+a51-ws = "a51_ws.cli:main"
+
+[tool.setuptools]
+packages = ["a51_ws"]
+
+[tool.setuptools.dynamic]
+version = { attr = "a51_ws._version.__version__" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

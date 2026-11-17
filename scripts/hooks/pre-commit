@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Stamp the build number into the commit being made.
+set -euo pipefail
+repo_root="$(git rev-parse --show-toplevel)"
+"$repo_root/scripts/bump-version.sh" "$repo_root"
+git add "$repo_root/a51_ws/_version.py"

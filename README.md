@@ -78,7 +78,7 @@ The full history is in [CHANGELOG.md](CHANGELOG.md).
 Homebrew support is coming. For now, install from source with [pipx](https://pipx.pypa.io):
 
 ```bash
-pipx install git+https://github.com/Area51Software/a51ws
+pipx install git+https://github.com/Area51Software/a51-ws
 ```
 
 Needs macOS, Python 3.12 or newer, [iTerm2](https://iterm2.com), and iTerm2's Python API turned on
@@ -122,7 +122,7 @@ for free. More at [area51software.io](https://area51software.io).
 ## Develop
 
 ```bash
-git clone https://github.com/Area51Software/a51ws && cd a51ws
+git clone https://github.com/Area51Software/a51-ws && cd a51-ws
 scripts/setup-hooks.sh                    # stamps the build number on every commit
 python3 -m venv .venv && .venv/bin/pip install -e '.[test]'
 .venv/bin/python -m pytest
